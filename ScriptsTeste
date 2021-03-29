@@ -1,0 +1,100 @@
+procedure Teste_Sem_Erro;
+begin
+  //Clicks the 'Limpar' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Click;
+  //Clicks the 'Um' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Um.Click;
+  //Simulates a left-button double click in a window or control as specified (relative position, shift keys).
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Zero.DblClick;
+  //Clicks the 'Multiplicar_por' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Multiplicar_por.Click;
+  //Clicks the 'Cinco' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Cinco.Click;
+  //Clicks the 'Igual_a' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  //Clicks the 'Dividir_por' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Dividir_por.Click;
+  //Clicks the 'Dois' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Dois.Click;
+  //Clicks the 'Igual_a' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  //Checks whether the 'Text' property of the Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput object equals '250'.
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput, 'Text', cmpEqual, '250', false);
+end;
+
+procedure Teste_Com_Erro;
+begin
+  //Activates the 'wndCalculadora' window.
+  Aliases.ApplicationFrameHost.wndCalculadora.Activate;
+  //Clicks the 'Limpar_entrada' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar_entrada.Click;
+  //Clicks the 'Cinco' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Cinco.Click;
+  //Clicks the 'Multiplicar_por' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Multiplicar_por.Click;
+  //Clicks the 'Nove' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Nove.Click;
+  //Clicks the 'Igual_a' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  //Checks whether the 'Text' property of the Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput object does not equal '45'.
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput, 'Text', cmpNotEqual, '45', false);
+end;
+
+procedure Teste_Verificacao_Validada;
+begin
+  //Clicks the 'Limpar' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Click;
+  //Clicks the 'Um' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Um.Click;
+  //Clicks the 'Zero' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Zero.Click;
+  //Clicks the 'Multiplicar_por' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Multiplicar_por.Click;
+  //Clicks the 'Oito' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Oito.Click;
+  //Clicks the 'Igual_a' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  //Checks whether the 'Text' property of the Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput object equals '80'.
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput, 'Text', cmpEqual, '80', false);
+  //Clicks the 'Menos' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Menos.Click;
+  //Clicks the 'Quatro' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Quatro.Click;
+  //Clicks the 'Zero' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Zero.Click;
+  //Clicks the 'Igual_a' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  //Checks whether the 'Text' property of the Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput object does not equal '0'.
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput, 'Text', cmpNotEqual, '0', false);
+end;
+
+procedure Teste_Verificacao_Invalidada;
+begin
+  //Clicks the 'Limpar' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Click;
+  //Clicks the 'Um' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Um.Click;
+  //Clicks the 'Zero' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Zero.Click;
+  //Clicks the 'Zero' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Zero.Click;
+  //Clicks the 'Dividir_por' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Dividir_por.Click;
+  //Clicks the 'Cinco' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Cinco.Click;
+  //Clicks the 'Igual_a' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  //Checks whether the 'Text' property of the Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput object does not equal '20'.
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput, 'Text', cmpNotEqual, '20', false);
+  //Clicks the 'Mais' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Mais.Click;
+  //Clicks the 'Um' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Um.Click;
+  //Clicks the 'Zero' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Zero.Click;
+  //Clicks the 'Igual_a' object.
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  //Checks whether the 'Text' property of the Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput object equals '30'.
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_4.TextContainer.NormalOutput, 'Text', cmpEqual, '30', false);
+end;
+
