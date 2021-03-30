@@ -1,0 +1,39 @@
+procedure Abrir;
+begin
+  Aliases.explorer.wndCabinetWClass.Activate;
+  TestedApps.NOTEPAD.Run(1, true);
+end;
+
+procedure Escrever;
+begin
+  Aliases.notepad.wndNotepad.Edit.Click(1, 8);
+  Aliases.notepad.wndNotepad.Edit.Keys('Eneas Santos Gurgel');
+  Aliases.notepad.wndNotepad.Edit.Keys('[End][Enter]');
+end;
+
+procedure Limpar;
+begin
+  Aliases.notepad.wndNotepad.Edit.Click(223, 78);
+  Aliases.notepad.wndNotepad.Edit.Keys('^a[BS]');
+  
+end;
+
+procedure Salvar;
+begin
+  Aliases.notepad.wndNotepad.Edit.Click(132, 72);
+  Aliases.notepad.wndNotepad.Edit.Keys('^s');
+end;
+
+procedure Fechar;
+begin
+  Aliases.notepad.wndNotepad.Close;
+end;
+
+procedure Executar;
+begin
+  Abrir;
+  Escrever;
+  Limpar;
+  Salvar;
+  Fechar;
+end;
