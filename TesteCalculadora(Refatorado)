@@ -1,0 +1,152 @@
+procedure TesteSoma;
+begin
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpContains, '0', false);
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Dois.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Cinco.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Mais.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Um.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Tr_s.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpContains, '38', false);
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Click;
+  
+  {
+  aqObject.CompareProperty(Sys.Process('calc').Window('SciCalc', 'Calculadora', 1).Window('Edit', '', 1).wText, cmpContains, '0', false);
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '2').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '5').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '+').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '1').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '3').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '=').ClickButton;
+  aqObject.CompareProperty(Sys.Process('calc').Window('SciCalc', 'Calculadora', 1).Window('Edit', '', 1).wText, cmpContains, '38', false);
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', 'C').ClickButton;
+  }
+  
+end;
+
+procedure TesteSoma2;
+begin
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpContains, '0', false);
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Dois.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Dois.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Cinco.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Mais.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Um.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Tr_s.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpMatches, '238', false);
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Click; 
+  
+  
+{
+  aqObject.CompareProperty(Sys.Process('calc').Window('SciCalc', 'Calculadora', 1).Window('Edit', '', 1).wText, cmpContains, '0', false);
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '2').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '2').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '5').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '+').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '1').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '3').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '=').ClickButton;
+  aqObject.CompareProperty(Sys.Process('calc').Window('SciCalc', 'Calculadora', 1).Window('Edit', '', 1).wText, cmpMatches, '238', false);
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', 'C').ClickButton;
+  }
+end;
+
+procedure TesteSubtracao;
+begin
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpContains, '0', false); 
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Dois.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Cinco.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Menos.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Um.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Tr_s.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpMatches, '12', false);
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Click; 
+
+
+{
+  aqObject.CompareProperty(Sys.Process('calc').Window('SciCalc', 'Calculadora', 1).Window('Edit', '', 1).wText, cmpContains, '0', false);
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '2').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '5').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '-').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '1').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '3').ClickButton;
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', '=').ClickButton;
+  aqObject.CompareProperty(Sys.Process('calc').Window('SciCalc', 'Calculadora', 1).Window('Edit', '', 1).wText, cmpMatches, '12', false);
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', 'C').ClickButton;
+  }
+end;
+
+procedure Test1;
+begin
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Keys('1');
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Keys('0[NumPlus]10[Enter][Esc]');
+
+  {
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Keys('1');
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Edit').Keys('0[NumPlus]10[Enter][Esc]');
+  }
+end;
+
+procedure Test2;
+begin
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Keys('7');
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Keys('+9[Enter]');
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Click; 
+
+  {
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Keys('7');
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').text:= '7';
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Edit').Keys('+9[Enter]');
+  Sys.Process('calc').Window('SciCalc', 'Calculadora').Window('Button', 'C').ClickButton;
+  }
+end;
+
+procedure TesteRaiz;
+begin
+aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpContains, '0', false); 
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Um.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Zero.DblClick;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Fun_es_padr_o.Raiz_quadrada.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Multiplicar_por.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Cinco.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpEqual, '50', false);
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Fun_es_padr_o.Quadrado.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Dividir_por.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Um.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Zero.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpEqual, '250', false);
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Click; 
+end;
+
+
+procedure Executar();
+begin 
+TesteSoma;
+TesteSoma2;
+TesteSubtracao;
+TesteRaiz;
+Test1;
+Test2;
+end;
+
+procedure Test3;
+begin
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpContains, '0', false); 
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Nove.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Oito.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Mais.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Um.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Zero.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Dois.Drag(27, 39, 13, -1);
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Mais.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Teclado_num_rico.Cinco.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Por_cento.Click;
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Operadores_padr_o.Igual_a.Click;
+  aqObject.CheckProperty(Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.A_exibi_o_0.TextContainer.NormalOutput, 'Text', cmpEqual, '210', false);
+  Aliases.Microsoft_WindowsCalculator.Calculadora.LandmarkTarget.Controles_de_exibi_o.Limpar.Click;
+end;
